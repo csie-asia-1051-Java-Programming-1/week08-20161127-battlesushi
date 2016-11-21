@@ -12,7 +12,7 @@ public class ex03 {
 		int sum=0;
 		System.out.print("輸入a的陣列數[_][_]:");
 		int A[][]=new int[sc.nextInt()][sc.nextInt()];
-		System.out.print("值");
+		System.out.print("值:");
 		for(int i=0;i<A.length;i++){//幾列
 			for(int j=0;j<A[i].length;j++){//列中幾個
 				A[i][j]=sc.nextInt();
@@ -20,7 +20,7 @@ public class ex03 {
 		}
 		System.out.print("輸入b的陣列數[_][_]:");
 		int B[][]=new int[sc.nextInt()][sc.nextInt()];
-		System.out.print("值");
+		System.out.print("值:");
 		for(int i=0;i<B.length;i++){//幾列
 			for(int j=0;j<B[i].length;j++){//列中幾個
 				B[i][j]=sc.nextInt();
@@ -29,15 +29,16 @@ public class ex03 {
 		int C[][]=new int[A.length][B[0].length];
 		for(int i=0;i<A.length;i++){
 			for(int j=0;j<B[0].length;j++){
-				for(int k=0;k<A[i].length;k++){ //因為 n2=m2
-					sum=A[i][k]*B[k][j];
+				sum=0;
+				for(int k=0;k<A[0].length;k++){ //因為 n2=m2
+					sum=sum+A[i][k]*B[k][j];
 				}
 				C[i][j]=sum;
 			}
 		}
-		for(int i=0;i<A.length;i++){
+		for(int i=0;i<A.length;i++){	//顯示
 			for(int j=0;j<B[0].length;j++){
-				System.out.print(C[i][j]);
+				System.out.print(C[i][j]+"\t");
 				}
 				System.out.println();
 			}
