@@ -30,7 +30,7 @@ public class ex03 {
 		for(int i=0;i<A.length;i++){
 			for(int j=0;j<B[0].length;j++){
 				sum=0;
-				for(int k=0;k<A[0].length;k++){ //因為 n2=m2
+				for(int k=0;k<A[0].length;k++){ //因為 n2=m2  加的次數也隨之而定
 					sum=sum+A[i][k]*B[k][j];
 				}
 				C[i][j]=sum;
