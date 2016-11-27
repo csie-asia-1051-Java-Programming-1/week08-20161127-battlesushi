@@ -115,8 +115,6 @@ public char data[][]=new char[9][23];
 			x=x/10;
 			n--;
 		}
-		
-		
 		for(int i=0;i<9;i++){
 			for(int j=0;j<23;j++){
 				System.out.print(data[i][j]);
@@ -125,5 +123,5 @@ public char data[][]=new char[9][23];
 			}
 		
 	}//run		
-	
+
 }
