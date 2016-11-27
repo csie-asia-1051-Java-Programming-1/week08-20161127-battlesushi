@@ -9,15 +9,15 @@ import java.util.Scanner;
 public class hw04 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		num numled=new num(sc.nextInt(),3);
-		numled.run();
+		LED led=new LED(sc.nextInt(),3);
+		led.run();
 	}
 }
-class num{//陣列做格子    數字  空格   數字之間位置更動
+class LED{//陣列做格子    數字  空格   數字之間位置更動
 public int n;//n間隔
 public int x;//輸入的數字
 public char data[][]=new char[9][23];
-	public num(int x1,int n1){
+	public LED(int x1,int n1){
 		x=x1;	//輸入的數字
 		n=n1;	//n間隔
 	}					//陣列數字間隔n*(5+1)  陣列做的話(1 為數字之間空格部分 每個數字之間差6)
