@@ -1,14 +1,56 @@
 package hw;
+import java.util.Scanner;
+
 /*
- * Topic: å°‡å‰ä¸€é¡ŒåŠ å¼·æˆå¯ä»¥åš10ä»¥ä¸‹çš„å„ç¨®æ•¸å­—ç³»çµ±è½‰æ› (å¿…é ˆä½¿ç”¨éè¿´)
+ * Topic: ±N«e¤@ÃD¥[±j¦¨¥i¥H°µ10¥H¤Uªº¦UºØ¼Æ¦r¨t²ÎÂà´« (¥²¶·¨Ï¥Î»¼°j)
  * Date: 2016/11/21
- * Author: 1050210XX å‘¨æ°¸æŒ¯è€å¸«
+Author: 105021030 ±i§Ê·¶
  */
 public class hw02 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner sc=new Scanner(System.in);
+		System.out.print("½Ğ¿é¤J­nÂà´«ªº¼Æ¦r,¿é¤J¬°´X¶i¨î,¿é¥X¬°´X¶i¨î:");
+		System.out.print(fun(sc.nextInt(),sc.nextShort(),sc.nextShort()));
 	}
-
+	public static String fun(int x,short a,short b) {
+		int count=0;
+		int sum=0;
+		while(x>0){//¥şÂà¤Q¶i¨î -->sum
+			sum=sum+(x%10)*(int)Math.pow(a,count);
+			count++;
+			x=x/10;
+		}//sum¬°Âà´«¤Q¶i¨î
+		if(sum/b==0){
+			return ""+sum%b;
+		}
+		else if(sum%b==1){
+			return fun(sum/b,a,b)+1;
+		}
+		else if(sum%b==2){
+			return fun(sum/b,a,b)+2;
+		}
+		else if(sum%b==3){
+			return fun(sum/b,a,b)+3;
+		}
+		else if(sum%b==4){
+			return fun(sum/b,a,b)+4;
+		}
+		else if(sum%b==5){
+			return fun(sum/b,a,b)+5;
+		}
+		else if(sum%b==6){
+			return fun(sum/b,a,b)+6;
+		}
+		else if(sum%b==7){
+			return fun(sum/b,a,b)+7;
+		}
+		else if(sum%b==8){
+			return fun(sum/b,a,b)+8;
+		}
+		else if(sum%b==9){
+			return fun(sum/b,a,b)+9;
+		}
+		else
+			return fun(sum/b,a,b)+0;
+	}
 }

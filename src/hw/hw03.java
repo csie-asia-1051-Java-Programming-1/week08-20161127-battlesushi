@@ -1,14 +1,35 @@
 package hw;
+import java.util.Scanner;
 /*
- * Topic: è«‹å¯«ä¸€å€‹éè¿´ç¨‹å¼ï¼Œè¼¸å…¥ä¸€å€‹ int å‹æ…‹çš„è³‡æ–™ï¼Œä¸¦å›å‚³è©²è³‡æ–™åœ¨äºŒé€²åˆ¶ä¸‹æœ‰å¤šå°‘å€‹ä½å…ƒæ˜¯ 1ï¼Œä¾‹å¦‚: è¼¸å…¥ 13 å¾—åˆ°çµæœç‚º 3
+ * Topic:½Ğ¼g¤@­Ó»¼°jµ{¦¡¡A¿é¤J¤@­Ó int «¬ºAªº¸ê®Æ¡A
+ * ¨Ã¦^¶Ç¸Ó¸ê®Æ¦b¤G¶i¨î¤U¦³¦h¤Ö­Ó¦ì¤¸¬O 1¡A¨Ò¦p: ¿é¤J 13 ±o¨ìµ²ªG¬° 3
  * Date: 2016/11/21
- * Author: 1050210XX å‘¨æ°¸æŒ¯è€å¸«
+ * Author: 105021030 ±i§Ê·¶
  */
 public class hw03 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner sc=new Scanner(System.in);
+		System.out.print("¿é¤J¼Æ¦r, ¦¹¼Æªº¶i¨î¬°:");
+		System.out.print(fun(sc.nextInt(),sc.nextShort()));
 	}
-
+	public static int fun(int x,short a) {
+		int count=0;
+		int sum=0;
+		while(x>0){//¥şÂà¤Q¶i¨î -->sum
+			sum=sum+(x%10)*(int)Math.pow(a,count);
+			count++;
+			x=x/10;
+		}//sum¬°Âà´«¤Q¶i¨î
+		if(sum==1){
+			return 1;
+		}
+		else if(sum==0){
+			return 0;
+		}
+		else if(sum%2==1){
+			return fun(sum/2,a)+1;
+		}
+		else
+			return fun(sum/2,a)+0;
+	}
 }
